@@ -1,0 +1,244 @@
+{
+    "appId": "205",
+    "appVersion": "1",
+    "name": "@jobname",
+    "metadata": [
+        {
+            "id": 395,
+            "namespace": "",
+            "tagName": "Test",
+            "tagCollectionId": 254,
+            "value": "%DB_TIER_IP%",
+            "required": true,
+            "editable": false,
+            "name": "Test"
+        },
+        {
+            "id": 396,
+            "namespace": "",
+            "tagName": "Name",
+            "tagCollectionId": 254,
+            "value": "%JOB_NAME%",
+            "required": true,
+            "editable": false,
+            "name": "Name"
+        }
+    ],
+    "environmentId": "13",
+    "tagIds": [],
+    "securityProfileIds": null,
+    "agingPolicyId": null,
+    "suspensionPolicyId": null,
+    "policyIds": null,
+    "preventTermination": false,
+    "parameters": {
+        "appParams": [],
+        "cloudParams": {
+            "cloudRegionId": "65",
+            "accountId": "7"
+        }
+    },
+    "jobs": [
+        {
+            "tierId": "206",
+            "policyIds": null,
+            "tagIds": [],
+            "securityProfileIds": null,
+            "parameters": {
+                "appParams": [
+                    {
+                        "name": "referredJob",
+                        "value": ""
+                    },
+                    {
+                        "name": "SSHPreference",
+                        "value": "NO_PREFERENCE"
+                    }
+                ],
+                "envParams": [],
+                "cloudParams": {
+                    "cloudRegionId": "65",
+                    "accountId": "7",
+                    "volumes": [
+                        {
+                            "name": "RootVolume",
+                            "bootable": true,
+                            "size": 10,
+                            "type": "pd-standard",
+                            "iops": null
+                        }
+                    ],
+                    "rootVolumeSize": "0",
+                    "cloudProperties": [
+                        {
+                            "name": "LaunchZone",
+                            "value": "europe-west1-b"
+                        },
+                        {
+                            "name": "projectName",
+                            "value": "acoustic-atom-256708"
+                        }
+                    ],
+                    "nics": [
+                        {
+                            "order": 1,
+                            "netId": "acoustic-atom-256708:default",
+                            "id": "default",
+                            "allocatePublicIp": "true",
+                            "ipForwardingEnabled": "false"
+                        }
+                    ],
+                    "instance": "g1-small"
+                }
+            },
+            "appServices": [],
+            "numNodesToLaunch": 1
+        },
+        {
+            "tierId": "207",
+            "policyIds": [
+                "1"
+            ],
+            "tagIds": [],
+            "securityProfileIds": null,
+            "parameters": {
+                "appParams": [
+                    {
+                        "name": "referredJob",
+                        "value": ""
+                    },
+                    {
+                        "name": "SSHKeyName",
+                        "value": "public"
+                    },
+                    {
+                        "name": "SSHPublicKey",
+                        "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBe7tyi5PpBFmtJ109VZEg8oeo3RX0e/nT5k3+qJcnK2b7sQIq+ez9LdlK1k402AXp0eHLcqm67H9i9ccZdCD1mSXbK1Q4VmH/Rr50DyFdbWY2ohqIhSkULnTIqa6JgxX0w+nEHHzXq3w5XMUDxXxqIXIMk86TLxOMXZ23uE6+Ht7hT897zji7VbCElSasUfi13UJsJpWnCLtvTaJ5wcI6SzINaCdU4iFsYbGOkyX1VuC1nra4Z76rURFbuYJD7cXsNZohMegG3ADxjAMNMly7mMIfdOUyT8hWpmBy/T+i4yis1YtkAQK815B2+9x3am4aBee4pTtBKjLZw27njUD2RTRSKS+nZxcNFJyoTwAY6Xu+FEegBUitc8yKTj0Tahvs2prFVGOVDKIO4NSQy/I0K1OJOK2QRaFWo6WpwlT8mpnyRke0tCCZ5ZPiIPPaYYIq6wNk7zqSrE6u0+87E0/C3Pt7O14Sq+qjvryp+QkIYFLPMXJ+p47VARjNmswWNlJMbIIhjiaafeY4zCtFRn3CK4yBZgouqk+MYpHcUMXrPiGR0hp2vmQP3V/Go032k1VGRalAMLPkKu06oW0Uf71gFy78U7iQP9WkMydIyvJSa0H3NHDzdXVNrykf9Wi6dLflj7d2WorU6ifjOQrVgPUjgcx7bBMQ1Kep89RryECtSw== admin@ssh_tunnel"
+                    },
+                    {
+                        "name": "SSHPreference",
+                        "value": "PUBLIC_KEY"
+                    }
+                ],
+                "envParams": [
+                    {
+                        "name": "db",
+                        "value": "%DB_TIER_IP%"
+                    },
+                    {
+                        "name": "job_name",
+                        "value": "%JOB_NAME%"
+                    },
+                    {
+                        "name": "ip",
+                        "value": "$CliqrTier_Database_IP"
+                    },
+                    {
+                        "name": "web",
+                        "value": "%web_TIER_IP%"
+                    },
+                    {
+                        "name": "test",
+                        "value": "Test"
+                    },
+                    {
+                        "name": "test2",
+                        "value": "test"
+                    }
+                ],
+                "cloudParams": {
+                    "cloudRegionId": "65",
+                    "accountId": "7",
+                    "volumes": [
+                        {
+                            "name": "RootVolume",
+                            "bootable": true,
+                            "size": 10,
+                            "type": "pd-standard",
+                            "iops": null
+                        }
+                    ],
+                    "rootVolumeSize": "0",
+                    "cloudProperties": [
+                        {
+                            "name": "LaunchZone",
+                            "value": "europe-west1-b"
+                        },
+                        {
+                            "name": "projectName",
+                            "value": "acoustic-atom-256708"
+                        }
+                    ],
+                    "nics": [
+                        {
+                            "order": 1,
+                            "netId": "acoustic-atom-256708:default",
+                            "id": "default",
+                            "allocatePublicIp": "true",
+                            "ipForwardingEnabled": "false"
+                        }
+                    ],
+                    "instance": "g1-small"
+                }
+            },
+            "appServices": [],
+            "numNodesToLaunch": 1
+        },
+        {
+            "tierId": "209",
+            "policyIds": null,
+            "tagIds": [],
+            "securityProfileIds": null,
+            "parameters": {
+                "appParams": [
+                    {
+                        "name": "referredJob",
+                        "value": ""
+                    },
+                    {
+                        "name": "SSHPreference",
+                        "value": "NO_PREFERENCE"
+                    }
+                ],
+                "envParams": [],
+                "cloudParams": {
+                    "cloudRegionId": "65",
+                    "accountId": "7",
+                    "volumes": [
+                        {
+                            "name": "RootVolume",
+                            "bootable": true,
+                            "size": 10,
+                            "type": "pd-standard",
+                            "iops": null
+                        }
+                    ],
+                    "rootVolumeSize": "0",
+                    "cloudProperties": [
+                        {
+                            "name": "LaunchZone",
+                            "value": "europe-west1-b"
+                        },
+                        {
+                            "name": "projectName",
+                            "value": "acoustic-atom-256708"
+                        }
+                    ],
+                    "nics": [
+                        {
+                            "order": 1,
+                            "netId": "acoustic-atom-256708:default",
+                            "id": "default",
+                            "allocatePublicIp": "true",
+                            "ipForwardingEnabled": "false"
+                        }
+                    ],
+                    "instance": "g1-small"
+                }
+            },
+            "appServices": []
+        }
+    ],
+    "timeZone": "GMT+01:00",
+    "responseJobJaxbNotRequired": true
+}
