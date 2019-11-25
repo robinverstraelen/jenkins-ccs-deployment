@@ -10,8 +10,8 @@ private_ssh_key_location = "private.key"
 
 # CloudCenter data
 url = "https://eu.cloudcenter.cisco.com"
-account_id = "360448"
-api_token = "95ebffd9-f305-467e-b92c-254600cd6d8e"
+account_id = "[your account id]"
+api_token = "[your token]"
 
 # The name of the tier where code is stored
 code_tier = "web"
